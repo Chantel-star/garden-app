@@ -1,11 +1,12 @@
-# Hardcoded values for the season and plant type
-season = "summer"  # TODO: Replace with input() to allow user interaction.
-plant_type = "flower"  # TODO: Replace with input() to allow user interaction.
+"""
+Garden Advice Application
 
-# Variable to hold gardening advice
-advice = ""
+This program gives gardening advice based on:
+- the season
+- the plant type
+"""
 
-# Determine advice based on the season
+# Determines advice based on the season
 def get_season_advice(season):
     """Return gardening advice based on the season."""
     if season == "summer":
@@ -15,7 +16,7 @@ def get_season_advice(season):
     else:
         return "No advice for this season."
 
-# Determine advice based on the plant type
+# Determines advice based on the plant type
 def get_plant_advice(plant_type):
     """Return gardening advice based on plant type."""
     if plant_type == "flower":
@@ -25,18 +26,14 @@ def get_plant_advice(plant_type):
     else:
         return "No advice for this type of plant."
 
-season = "summer"
-plant_type = "flower"
+season = input("Enter the season: ").strip().lower()
+plant_type =  input("Enter the plant type: ").strip().lower()
 
 season_advice = get_season_advice(season)
 plant_advice = get_plant_advice(plant_type)
 
 # Print the generated advice
-print(season_advice)
-print(plant_advice)
+print("\nGardening Advice:")
+print(get_season_advice(season))
+print(get_plant_advice(plant_type))
 
-# TODO: Examples of possible features to add:
-# - Add detailed comments explaining each block of code.
-# - Refactor the code into functions for better readability and modularity.
-# - Store advice in a dictionary for multiple plants and seasons.
-# - Recommend plants based on the entered season.
